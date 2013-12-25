@@ -1,8 +1,10 @@
 Fbgraph::Application.routes.draw do
+
   get "home/index"
-
-  resources :users
-
+  match '/user/:id' ,to: 'user#show'
+  match '/auth/facebook/callback', to:'sessions#create'
+  match 'auth/failure' , to: redirect('/')
+  match 'signout', to: 'sessions#destroy', as: 'signout'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

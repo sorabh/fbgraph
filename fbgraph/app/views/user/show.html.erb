@@ -1,0 +1,19 @@
+<section>
+  <table>
+    <tbody>
+    <% for user in @users %>
+      <tr>
+        <td>Name</td>
+        <td><%=  user.name%></td>
+      </tr>
+      <tr>
+        <td>Location</td>
+        <td><%=  user.location%></td>
+      </tr> <tr>
+        <td>Gender</td>
+        <td><%=  user.gender%></td>
+      </tr>
+    <%end%>
+    </tbody>
+  </table>
+</section>
